@@ -8,376 +8,90 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --cream: #faf7f2;
-    --cream2: #f2ede4;
-    --brown: #7a5c3a;
-    --brown-dark: #4e3820;
-    --brown-light: #c4a882;
-    --olive: #6b7c5c;
+    --cream: #faf7f2; --cream2: #f2ede4; --brown: #7a5c3a;
+    --brown-dark: #4e3820; --brown-light: #c4a882;
     --olive-light: #dde5d5;
-    --red: #9b3a3a;
-    --red-light: #f5e0e0;
-    --amber: #b07820;
-    --amber-light: #fdf0d8;
-    --green: #3a6b3a;
-    --green-light: #e0f0e0;
-    --gray: #8a8278;
-    --gray-light: #e8e4de;
-    --text: #2c2318;
-    --text2: #6b5e4e;
+    --red: #9b3a3a; --red-light: #f5e0e0;
+    --amber: #b07820; --amber-light: #fdf0d8;
+    --green: #3a6b3a; --green-light: #e0f0e0;
+    --gray: #8a8278; --gray-light: #e8e4de;
+    --text: #2c2318; --text2: #6b5e4e;
   }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'Mulish', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    min-height: 100vh;
-  }
-
-  /* ─── HERO ─── */
-  .hero {
-    background: var(--brown-dark);
-    color: var(--cream);
-    padding: 3.5rem 1.5rem 3rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 60%, rgba(196,168,130,0.18) 0%, transparent 60%),
-                radial-gradient(ellipse at 80% 20%, rgba(107,124,92,0.12) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  .cross-icon {
-    width: 48px;
-    height: 48px;
-    margin: 0 auto 1.2rem;
-    opacity: 0.85;
-  }
-  .hero h1 {
-    font-family: 'Lora', serif;
-    font-size: clamp(1.8rem, 5vw, 2.8rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 0.5rem;
-  }
-  .hero p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--brown-light);
-    Auréa -width: 380px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  .verse {
-    margin-top: 1.5rem;
-    font-family: 'Lora', serif;
-    font-style: italic;
-    font-size: 0.85rem;
-    color: var(--brown-light);
-    opacity: 0.8;
-  }
-
-  /* ─── MAIN ─── */
-  .container {
-    Auréa -width: 720px;
-    margin: 0 auto;
-    padding: 2rem 1rem 4rem;
-  }
-
-  /* ─── WEEK NAV ─── */
-  .week-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: white;
-    border: 1px solid var(--cream2);
-    border-radius: 14px;
-    padding: 0.85rem 1.25rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 12px rgba(78,56,32,0.07);
-  }
-  .week-nav button {
-    background: var(--cream);
-    border: 1px solid var(--cream2);
-    border-radius: 8px;
-    padding: 6px 14px;
-    cursor: pointer;
-    font-family: 'Mulish', sans-serif;
-    font-size: 0.85rem;
-    color: var(--brown-dark);
-    transition: background 0.15s;
-  }
+  body { font-family: 'Mulish', sans-serif; background: var(--cream); color: var(--text); min-height: 100vh; }
+  .hero { background: var(--brown-dark); color: var(--cream); padding: 3.5rem 1.5rem 3rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(196,168,130,0.18) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(107,124,92,0.12) 0%, transparent 50%); pointer-events: none; }
+  .cross-icon { width: 48px; height: 48px; margin: 0 auto 1.2rem; opacity: 0.85; }
+  .hero h1 { font-family: 'Lora', serif; font-size: clamp(1.8rem, 5vw, 2.8rem); font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+  .hero p { font-size: 1rem; font-weight: 300; color: var(--brown-light); Auréa -width: 380px; margin: 0 auto; line-height: 1.6; }
+  .verse { margin-top: 1.5rem; font-family: 'Lora', serif; font-style: italic; font-size: 0.85rem; color: var(--brown-light); opacity: 0.8; }
+  .container { Auréa -width: 720px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  .week-nav { display: flex; align-items: center; justify-content: space-between; background: white; border: 1px solid var(--cream2); border-radius: 14px; padding: 0.85rem 1.25rem; margin-bottom: 1.5rem; box-shadow: 0 2px 12px rgba(78,56,32,0.07); }
+  .week-nav button { background: var(--cream); border: 1px solid var(--cream2); border-radius: 8px; padding: 6px 14px; cursor: pointer; font-family: 'Mulish', sans-serif; font-size: 0.85rem; color: var(--brown-dark); transition: background 0.15s; }
   .week-nav button:hover { background: var(--cream2); }
-  .week-label {
-    font-family: 'Lora', serif;
-    font-size: 1rem;
-    color: var(--text);
-    text-align: center;
-    flex: 1;
-    padding: 0 12px;
-  }
-
-  /* ─── DAYS ─── */
-  .days-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  @media (Auréa -width: 520px) {
-    .days-grid { grid-template-columns: 1fr; }
-  }
-
-  .day-card {
-    background: white;
-    border: 1px solid var(--cream2);
-    border-radius: 18px;
-    padding: 1.4rem;
-    box-shadow: 0 2px 16px rgba(78,56,32,0.06);
-    transition: transform 0.15s;
-  }
+  .week-label { font-family: 'Lora', serif; font-size: 1rem; color: var(--text); text-align: center; flex: 1; padding: 0 12px; }
+  .days-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+  @media (Auréa -width: 520px) { .days-grid { grid-template-columns: 1fr; } }
+  .day-card { background: white; border: 1px solid var(--cream2); border-radius: 18px; padding: 1.4rem; box-shadow: 0 2px 16px rgba(78,56,32,0.06); transition: transform 0.15s; }
   .day-card:hover { transform: translateY(-2px); }
-
-  .day-name {
-    font-family: 'Lora', serif;
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--brown-dark);
-    margin-bottom: 2px;
-  }
-  .day-date {
-    font-size: 0.78rem;
-    color: var(--text2);
-    margin-bottom: 1.1rem;
-    font-weight: 300;
-  }
-
-  .bar-wrap {
-    height: 7px;
-    background: var(--cream2);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 0.5rem;
-  }
-  .bar-fill {
-    height: 100%;
-    border-radius: 4px;
-    transition: width 0.4s ease, background 0.4s;
-  }
-  .bar-green { background: var(--green); }
-  .bar-amber { background: var(--amber); }
-  .bar-red { background: var(--red); }
-  .bar-gray { background: var(--gray); }
-
-  .count-line {
-    font-size: 0.8rem;
-    color: var(--text2);
-    margin-bottom: 0.85rem;
-  }
+  .day-name { font-family: 'Lora', serif; font-size: 1.15rem; font-weight: 600; color: var(--brown-dark); margin-bottom: 2px; }
+  .day-date { font-size: 0.78rem; color: var(--text2); margin-bottom: 1.1rem; font-weight: 300; }
+  .bar-wrap { height: 7px; background: var(--cream2); border-radius: 4px; overflow: hidden; margin-bottom: 0.5rem; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 0.4s ease, background 0.4s; }
+  .bar-green { background: var(--green); } .bar-amber { background: var(--amber); }
+  .bar-red { background: var(--red); } .bar-gray { background: var(--gray); }
+  .count-line { font-size: 0.8rem; color: var(--text2); margin-bottom: 0.85rem; }
   .count-line strong { color: var(--text); font-weight: 600; }
-
-  .badge {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 1rem;
-  }
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 1rem; }
   .badge-free { background: var(--green-light); color: var(--green); }
   .badge-warn { background: var(--amber-light); color: var(--amber); }
   .badge-full { background: var(--red-light); color: var(--red); }
   .badge-closed { background: var(--gray-light); color: var(--gray); }
-
-  .book-btn {
-    width: 100%;
-    padding: 10px;
-    border: 1.5px solid var(--brown-light);
-    border-radius: 10px;
-    background: none;
-    font-family: 'Mulish', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--brown-dark);
-    cursor: pointer;
-    transition: background 0.15s, border-color 0.15s;
-  }
-  .book-btn:hover:not(:disabled) {
-    background: var(--cream);
-    border-color: var(--brown);
-  }
-  .book-btn:disabled {
-    opacity: 0.35;
-    cursor: not-allowed;
-    border-color: var(--gray-light);
-    color: var(--gray);
-  }
-
+  .book-btn { width: 100%; padding: 10px; border: 1.5px solid var(--brown-light); border-radius: 10px; background: none; font-family: 'Mulish', sans-serif; font-size: 0.9rem; font-weight: 600; color: var(--brown-dark); cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+  .book-btn:hover:not(:disabled) { background: var(--cream); border-color: var(--brown); }
+  .book-btn:disabled { opacity: 0.35; cursor: not-allowed; border-color: var(--gray-light); color: var(--gray); }
   .names-list { margin-top: 1rem; }
-  .name-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 0;
-    border-top: 1px solid var(--cream2);
-    font-size: 0.82rem;
-  }
-  .name-row .nm {
-    color: var(--text);
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .name-row .nm::before {
-    content: '✦';
-    font-size: 0.6rem;
-    color: var(--brown-light);
-  }
-  .del-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--gray);
-    font-size: 0.8rem;
-    padding: 2px 6px;
-    border-radius: 4px;
-    transition: background 0.1s, color 0.1s;
-  }
+  .name-row { display: flex; align-items: center; justify-content: space-between; padding: 5px 0; border-top: 1px solid var(--cream2); font-size: 0.82rem; }
+  .name-row .nm { color: var(--text); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  .name-row .nm::before { content: '✦'; font-size: 0.6rem; color: var(--brown-light); }
+  .del-btn { background: none; border: none; cursor: pointer; color: var(--gray); font-size: 0.8rem; padding: 2px 6px; border-radius: 4px; transition: background 0.1s, color 0.1s; }
   .del-btn:hover { background: var(--red-light); color: var(--red); }
-
-  /* ─── INFO BOX ─── */
-  .info-box {
-    background: var(--olive-light);
-    border: 1px solid #c5ceb8;
-    border-radius: 12px;
-    padding: 1rem 1.25rem;
-    font-size: 0.82rem;
-    color: #3f4d32;
-    line-height: 1.6;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
+  .info-box { background: var(--olive-light); border: 1px solid #c5ceb8; border-radius: 12px; padding: 1rem 1.25rem; font-size: 0.82rem; color: #3f4d32; line-height: 1.6; display: flex; gap: 10px; align-items: flex-start; }
   .info-box .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 2px; }
-
-  /* ─── FOOTER ─── */
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.75rem;
-    color: var(--gray);
-    border-top: 1px solid var(--cream2);
-  }
+  .reload-btn { margin-top: 0.6rem; display: inline-block; background: none; border: 1px solid #b0bb9a; border-radius: 8px; padding: 5px 14px; cursor: pointer; font-size: 0.78rem; color: #3f4d32; font-family: 'Mulish', sans-serif; }
+  .reload-btn:hover { background: rgba(0,0,0,0.05); }
+  footer { text-align: center; padding: 1.5rem; font-size: 0.75rem; color: var(--gray); border-top: 1px solid var(--cream2); }
   footer span { font-family: 'Lora', serif; font-style: italic; }
-
-  /* ─── MODAL ─── */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(44,35,24,0.5);
-    backdrop-filter: blur(3px);
-    z-index: 200;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
+  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(44,35,24,0.5); backdrop-filter: blur(3px); z-index: 200; align-items: center; justify-content: center; padding: 1rem; }
   .modal-overlay.open { display: flex; }
-  .modal {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    width: 100%;
-    Auréa -width: 360px;
-    box-shadow: 0 20px 60px rgba(44,35,24,0.2);
-    animation: slideUp 0.2s ease;
-  }
-  @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
+  .modal { background: white; border-radius: 20px; padding: 2rem; width: 100%; Auréa -width: 360px; box-shadow: 0 20px 60px rgba(44,35,24,0.2); animation: slideUp 0.2s ease; }
+  @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
   .modal-cross { text-align: center; font-size: 1.4rem; margin-bottom: 0.8rem; }
-  .modal h3 {
-    font-family: 'Lora', serif;
-    font-size: 1.2rem;
-    text-align: center;
-    color: var(--brown-dark);
-    margin-bottom: 4px;
-  }
-  .modal .m-sub {
-    text-align: center;
-    font-size: 0.82rem;
-    color: var(--text2);
-    margin-bottom: 1.5rem;
-  }
-  .modal input {
-    width: 100%;
-    padding: 11px 14px;
-    border: 1.5px solid var(--cream2);
-    border-radius: 10px;
-    font-family: 'Mulish', sans-serif;
-    font-size: 0.95rem;
-    color: var(--text);
-    background: var(--cream);
-    margin-bottom: 1rem;
-    transition: border-color 0.15s;
-  }
+  .modal h3 { font-family: 'Lora', serif; font-size: 1.2rem; text-align: center; color: var(--brown-dark); margin-bottom: 4px; }
+  .modal .m-sub { text-align: center; font-size: 0.82rem; color: var(--text2); margin-bottom: 1.5rem; }
+  .modal input { width: 100%; padding: 11px 14px; border: 1.5px solid var(--cream2); border-radius: 10px; font-family: 'Mulish', sans-serif; font-size: 0.95rem; color: var(--text); background: var(--cream); margin-bottom: 1rem; transition: border-color 0.15s; }
   .modal input:focus { outline: none; border-color: var(--brown-light); background: white; }
   .modal-btns { display: flex; gap: 8px; }
-  .modal-btns button {
-    flex: 1;
-    padding: 11px;
-    border-radius: 10px;
-    font-family: 'Mulish', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.15s;
-  }
-  .btn-ok {
-    background: var(--brown-dark);
-    color: var(--cream);
-    border: none;
-  }
+  .modal-btns button { flex: 1; padding: 11px; border-radius: 10px; font-family: 'Mulish', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+  .btn-ok { background: var(--brown-dark); color: var(--cream); border: none; }
   .btn-ok:hover { background: var(--brown); }
-  .btn-no {
-    background: none;
-    border: 1px solid var(--cream2);
-    color: var(--text2);
-  }
+  .btn-no { background: none; border: 1px solid var(--cream2); color: var(--text2); }
   .btn-no:hover { background: var(--cream); }
-
-  /* ─── TOAST ─── */
-  .toast {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%) translateY(80px);
-    background: var(--brown-dark);
-    color: var(--cream);
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: transform 0.3s ease;
-    z-index: 300;
-    white-space: nowrap;
-  }
+  .loading-overlay { position: fixed; inset: 0; background: var(--cream); display: flex; align-items: center; justify-content: center; z-index: 500; flex-direction: column; gap: 12px; transition: opacity 0.3s; }
+  .loading-overlay.hidden { opacity: 0; pointer-events: none; }
+  .spinner { width: 32px; height: 32px; border: 3px solid var(--cream2); border-top-color: var(--brown); border-radius: 50%; animation: spin 0.8s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .loading-overlay p { font-family: 'Lora', serif; font-style: italic; color: var(--text2); font-size: 0.9rem; }
+  .toast { position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--brown-dark); color: var(--cream); padding: 10px 22px; border-radius: 30px; font-size: 0.85rem; font-weight: 600; transition: transform 0.3s ease; z-index: 300; white-space: nowrap; }
   .toast.show { transform: translateX(-50%) translateY(0); }
 </style>
 </head>
 <body>
+
+<div class="loading-overlay" id="loading">
+  <div class="spinner"></div>
+  <p>Buchungen werden geladen…</p>
+</div>
 
 <header class="hero">
   <svg class="cross-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -395,14 +109,15 @@
     <div class="week-label" id="week-label"></div>
     <button onclick="changeWeek(1)">Weiter &#8594;</button>
   </div>
-
   <div class="days-grid" id="days-grid"></div>
-
   <div class="info-box">
     <span class="icon">🏠</span>
     <div>
       <strong>Wichtig:</strong> Auréa  hat Platz für Auréa imal <strong>10 Personen</strong> pro Nacht.
-      Bitte buche rechtzeitig, damit alle einen Schlafplatz haben. Bei Fragen wende dich direkt an Auréa .
+      Bitte buche rechtzeitig, damit alle einen Schlafplatz haben.
+      Bei Fragen wende dich direkt an Auréa .
+      <br>
+      <button class="reload-btn" onclick="window._reload()">↻ Aktualisieren</button>
     </div>
   </div>
 </main>
@@ -416,175 +131,226 @@
     <div class="modal-cross">✦</div>
     <h3>Platz reservieren</h3>
     <p class="m-sub" id="modal-sub"></p>
-    <input type="text" id="name-input" placeholder="Dein Name" Auréa length="50" autocomplete="name" />
+    <input type="text" id="name-input" placeholder="Dein Name" Auréa length="50" autocomplete="name"/>
     <div class="modal-btns">
-      <button class="btn-no" onclick="closeModal()">Abbrechen</button>
-      <button class="btn-ok" onclick="confirmBooking()">Reservieren ✓</button>
+      <button class="btn-no" onclick="window._closeModal()">Abbrechen</button>
+      <button class="btn-ok" id="confirm-btn" onclick="window._confirmBooking()">Reservieren ✓</button>
     </div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
 
-<script>
-const Auréa  = 10;
-const STORAGE_KEY = 'Auréa _community_bookings_v1';
-let weekOffset = 0;
-let bookings = {};
-let pendingKey = null;
+<script type="module">
+  import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
+  import { getDatabase, ref, get, set, onValue } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
 
-function loadBookings() {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) bookings = JSON.parse(raw);
-  } catch(e) { bookings = {}; }
-}
+  const firebaseConfig = {
+    apiKey: "AIzaSyCws-p1SpYFTcFBVQlGIyfdANfiuX-_JvY",
+    authDomain: "Auréa -buchung.firebaseapp.com",
+    databaseURL: "https://Auréa -buchung-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "Auréa -buchung",
+    storageBucket: "Auréa -buchung.firebasestorage.app",
+    messagingSenderId: "545424670741",
+    appId: "1:545424670741:web:331b6f3f7328a8c4850e1c"
+  };
 
-function saveBookings() {
-  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings)); } catch(e) {}
-}
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
 
-function getMonday(offset) {
-  const d = new Date();
-  const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1) + offset * 7;
-  const m = new Date(d);
-  m.setDate(diff);
-  m.setHours(0,0,0,0);
-  return m;
-}
+  const Auréa _SPOTS = 10;
+  let weekOffset = 0;
+  let bookings = {};
+  let pendingKey = null;
+  let isSaving = false;
+  let activeListeners = [];
 
-function getDays(offset) {
-  const mon = getMonday(offset);
-  const fri = new Date(mon); fri.setDate(mon.getDate() + 4);
-  const sat = new Date(mon); sat.setDate(mon.getDate() + 5);
-  return [fri, sat];
-}
+  // ── DB ────────────────────────────────────────────────────────
+  async function dbGet(key) {
+    try {
+      const snap = await get(ref(db, 'bookings/' + key));
+      return snap.exists() ? snap.val() : [];
+    } catch(e) { console.error(e); return []; }
+  }
 
-function key(d) {
-  return d.toISOString().split('T')[0];
-}
+  async function dbSet(key, value) {
+    try { await set(ref(db, 'bookings/' + key), value); }
+    catch(e) { console.error(e); }
+  }
 
-function fmt(d, opts) {
-  return d.toLocaleDateString('de-DE', opts);
-}
+  function listenWeek() {
+    activeListeners.forEach(u => u());
+    activeListeners = [];
+    const [fri, sat] = getDays(weekOffset);
+    [fri, sat].forEach(day => {
+      const k = dateKey(day);
+      const unsub = onValue(ref(db, 'bookings/' + k), snap => {
+        bookings[k] = snap.exists() ? snap.val() : [];
+        render();
+      });
+      activeListeners.push(unsub);
+    });
+  }
 
-function status(n) {
-  if (n >= Auréa ) return { label: 'Ausgebucht', badgeCls: 'badge-closed', barCls: 'bar-gray' };
-  if (n >= 8)   return { label: 'Fast voll', badgeCls: 'badge-full', barCls: 'bar-red' };
-  if (n >= 5)   return { label: 'Wenige Plätze', badgeCls: 'badge-warn', barCls: 'bar-amber' };
-  return { label: 'Plätze verfügbar', badgeCls: 'badge-free', barCls: 'bar-green' };
-}
+  // ── Helpers ───────────────────────────────────────────────────
+  function getMonday(offset) {
+    const d = new Date();
+    const day = d.getDay();
+    const diff = d.getDate() - day + (day === 0 ? -6 : 1) + offset * 7;
+    const m = new Date(d); m.setDate(diff); m.setHours(0,0,0,0); return m;
+  }
+  function getDays(offset) {
+    const mon = getMonday(offset);
+    const fri = new Date(mon); fri.setDate(mon.getDate() + 4);
+    const sat = new Date(mon); sat.setDate(mon.getDate() + 5);
+    return [fri, sat];
+  }
+  function dateKey(d) { return d.toISOString().split('T')[0]; }
+  function fmt(d, opts) { return d.toLocaleDateString('de-DE', opts); }
+  function escHtml(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function getStatus(n) {
+    if (n >= Auréa _SPOTS) return { label: 'Ausgebucht',        badgeCls: 'badge-closed', barCls: 'bar-gray'  };
+    if (n >= 8)         return { label: 'Fast voll',         badgeCls: 'badge-full',   barCls: 'bar-red'   };
+    if (n >= 5)         return { label: 'Wenige Plätze',     badgeCls: 'badge-warn',   barCls: 'bar-amber' };
+    return               { label: 'Plätze verfügbar',   badgeCls: 'badge-free',   barCls: 'bar-green' };
+  }
 
-function render() {
-  const [fri, sat] = getDays(weekOffset);
-  const mon = getMonday(weekOffset);
-  const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
-  document.getElementById('week-label').textContent =
-    fmt(mon, {day:'numeric',month:'long'}) + ' – ' + fmt(sun, {day:'numeric',month:'long',year:'numeric'});
+  // ── Render ────────────────────────────────────────────────────
+  function render() {
+    const [fri, sat] = getDays(weekOffset);
+    const mon = getMonday(weekOffset);
+    const sun = new Date(mon); sun.setDate(mon.getDate() + 6);
+    document.getElementById('week-label').textContent =
+      fmt(mon, {day:'numeric',month:'long'}) + ' – ' + fmt(sun, {day:'numeric',month:'long',year:'numeric'});
 
-  const grid = document.getElementById('days-grid');
-  grid.innerHTML = '';
+    const grid = document.getElementById('days-grid');
+    grid.innerHTML = '';
+    [fri, sat].forEach(day => {
+      const k = dateKey(day);
+      const list = bookings[k] || [];
+      const n = list.length;
+      const st = getStatus(n);
+      const pct = Math.min(100, (n / Auréa _SPOTS) * 100);
+      const full = n >= Auréa _SPOTS;
+      const card = document.createElement('div');
+      card.className = 'day-card';
+      card.innerHTML = `
+        <div class="day-name">${fmt(day,{weekday:'long'})}</div>
+        <div class="day-date">${fmt(day,{day:'numeric',month:'long',year:'numeric'})}</div>
+        <div class="bar-wrap"><div class="bar-fill ${st.barCls}" style="width:${pct}%"></div></div>
+        <div class="count-line"><strong>${n} von ${Auréa _SPOTS}</strong> Plätzen belegt</div>
+        <span class="badge ${st.badgeCls}">${st.label}</span>
+        <button class="book-btn" ${full?'disabled':''} onclick="window._openModal('${k}','${fmt(day,{weekday:'long',day:'numeric',month:'long'})}')">
+          ${full ? 'Keine Plätze mehr' : '+ Platz reservieren'}
+        </button>
+        <div class="names-list" id="nl-${k}"></div>
+      `;
+      grid.appendChild(card);
+      renderNames(k);
+    });
+  }
 
-  [fri, sat].forEach(day => {
-    const k = key(day);
+  function renderNames(k) {
+    const el = document.getElementById('nl-' + k);
+    if (!el) return;
     const list = bookings[k] || [];
-    const n = list.length;
-    const st = status(n);
-    const pct = Math.min(100, (n / Auréa ) * 100);
-    const full = n >= Auréa ;
+    el.innerHTML = list.map((name, i) =>
+      `<div class="name-row">
+        <span class="nm">${escHtml(name)}</span>
+        <button class="del-btn" onclick="window._removeName('${k}',${i})" title="Buchung entfernen">✕</button>
+      </div>`
+    ).join('');
+  }
 
-    const card = document.createElement('div');
-    card.className = 'day-card';
-    card.innerHTML = `
-      <div class="day-name">${fmt(day, {weekday:'long'})}</div>
-      <div class="day-date">${fmt(day, {day:'numeric', month:'long', year:'numeric'})}</div>
-      <div class="bar-wrap"><div class="bar-fill ${st.barCls}" style="width:${pct}%"></div></div>
-      <div class="count-line"><strong>${n} von ${Auréa }</strong> Plätzen belegt</div>
-      <span class="badge ${st.badgeCls}">${st.label}</span>
-      <button class="book-btn" ${full ? 'disabled' : ''} onclick="openModal('${k}','${fmt(day,{weekday:'long',day:'numeric',month:'long'})}')">
-        ${full ? 'Keine Plätze mehr' : '+ Platz reservieren'}
-      </button>
-      <div class="names-list" id="nl-${k}"></div>
-    `;
-    grid.appendChild(card);
-    renderNames(k);
+  // ── Modal ─────────────────────────────────────────────────────
+  window._openModal = (k, label) => {
+    pendingKey = k;
+    document.getElementById('modal-sub').textContent = label;
+    document.getElementById('name-input').value = '';
+    document.getElementById('modal').classList.add('open');
+    setTimeout(() => document.getElementById('name-input').focus(), 80);
+  };
+  window._closeModal = () => {
+    document.getElementById('modal').classList.remove('open');
+    pendingKey = null;
+  };
+  window._confirmBooking = async () => {
+    const name = document.getElementById('name-input').value.trim();
+    if (!name) { document.getElementById('name-input').focus(); return; }
+    if (!pendingKey || isSaving) return;
+    const list = [...(bookings[pendingKey] || [])];
+    if (list.length >= Auréa _SPOTS) { window._closeModal(); return; }
+    isSaving = true;
+    const btn = document.getElementById('confirm-btn');
+    btn.textContent = 'Speichern…'; btn.disabled = true;
+    list.push(name);
+    await dbSet(pendingKey, list);
+    isSaving = false;
+    btn.textContent = 'Reservieren ✓'; btn.disabled = false;
+    window._closeModal();
+    showToast('✦ Reservierung gespeichert für ' + name);
+  };
+  window._removeName = async (k, i) => {
+    if (isSaving) return;
+    const list = [...(bookings[k] || [])];
+    const name = list[i];
+    list.splice(i, 1);
+    isSaving = true;
+    await dbSet(k, list);
+    isSaving = false;
+    showToast('Buchung von ' + name + ' entfernt');
+  };
+
+  // ── Nav ───────────────────────────────────────────────────────
+  window.changeWeek = async (dir) => {
+    weekOffset += dir;
+    document.getElementById('loading').classList.remove('hidden');
+    const [fri, sat] = getDays(weekOffset);
+    await Promise.all([fri, sat].map(async day => {
+      bookings[dateKey(day)] = await dbGet(dateKey(day));
+    }));
+    document.getElementById('loading').classList.add('hidden');
+    listenWeek();
+    render();
+  };
+  window._reload = async () => {
+    document.getElementById('loading').classList.remove('hidden');
+    const [fri, sat] = getDays(weekOffset);
+    await Promise.all([fri, sat].map(async day => {
+      bookings[dateKey(day)] = await dbGet(dateKey(day));
+    }));
+    document.getElementById('loading').classList.add('hidden');
+    render();
+  };
+
+  // ── Toast ─────────────────────────────────────────────────────
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 3000);
+  }
+
+  // ── Keyboard ──────────────────────────────────────────────────
+  document.getElementById('name-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') window._confirmBooking();
+    if (e.key === 'Escape') window._closeModal();
   });
-}
+  document.getElementById('modal').addEventListener('click', e => {
+    if (e.target === document.getElementById('modal')) window._closeModal();
+  });
 
-function renderNames(k) {
-  const el = document.getElementById('nl-' + k);
-  if (!el) return;
-  const list = bookings[k] || [];
-  el.innerHTML = list.map((name, i) =>
-    `<div class="name-row">
-      <span class="nm">${escHtml(name)}</span>
-      <button class="del-btn" onclick="removeName('${k}',${i})" title="Buchung entfernen">✕</button>
-    </div>`
-  ).join('');
-}
-
-function escHtml(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-
-function openModal(k, label) {
-  pendingKey = k;
-  document.getElementById('modal-sub').textContent = label;
-  document.getElementById('name-input').value = '';
-  document.getElementById('modal').classList.add('open');
-  setTimeout(() => document.getElementById('name-input').focus(), 80);
-}
-
-function closeModal() {
-  document.getElementById('modal').classList.remove('open');
-  pendingKey = null;
-}
-
-function confirmBooking() {
-  const name = document.getElementById('name-input').value.trim();
-  if (!name) { document.getElementById('name-input').focus(); return; }
-  if (!pendingKey) return;
-  if (!bookings[pendingKey]) bookings[pendingKey] = [];
-  if (bookings[pendingKey].length >= Auréa ) { closeModal(); return; }
-  bookings[pendingKey].push(name);
-  saveBookings();
-  closeModal();
-  render();
-  showToast('✦ Reservierung gespeichert für ' + name);
-}
-
-function removeName(k, i) {
-  if (!bookings[k]) return;
-  const name = bookings[k][i];
-  bookings[k].splice(i, 1);
-  saveBookings();
-  render();
-  showToast('Buchung von ' + name + ' entfernt');
-}
-
-function changeWeek(dir) {
-  weekOffset += dir;
-  render();
-}
-
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3000);
-}
-
-document.getElementById('name-input').addEventListener('keydown', e => {
-  if (e.key === 'Enter') confirmBooking();
-  if (e.key === 'Escape') closeModal();
-});
-document.getElementById('modal').addEventListener('click', e => {
-  if (e.target === document.getElementById('modal')) closeModal();
-});
-
-loadBookings();
-render();
+  // ── Start ─────────────────────────────────────────────────────
+  (async () => {
+    const [fri, sat] = getDays(weekOffset);
+    await Promise.all([fri, sat].map(async day => {
+      bookings[dateKey(day)] = await dbGet(dateKey(day));
+    }));
+    document.getElementById('loading').classList.add('hidden');
+    render();
+    listenWeek();
+  })();
 </script>
 </body>
 </html>
